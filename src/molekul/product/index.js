@@ -11,8 +11,8 @@ class Product extends Component {
            
          }
     }
+
     render() { 
-       
         return ( 
             <div className="product">
                 {this.props.submitData.map(value => {
@@ -26,6 +26,11 @@ class Product extends Component {
 }
  
 Product.propTypes = {
-    submitData : PropTypes.array
+    submitData : PropTypes.arrayOf(
+        PropTypes.shape({
+            name : PropTypes.string,
+            id : PropTypes.number
+        })
+    )
 }
 export default Product;
