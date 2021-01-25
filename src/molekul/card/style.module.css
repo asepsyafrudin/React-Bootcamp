@@ -1,0 +1,54 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+    text-align: center;
+  }
+
+  .img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .title h1, .title span {
+    margin-top: 0px;
+  }
+
+  .description {
+    font-weight: bold;
+  }
+
+  .price {
+    position: absolute;
+    bottom: -5%;
+    left: 10%;
+    background-color: rgb(200, 179, 214);
+    width: 100px;
+    font-family: fantasy;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 5px;
+
+
+  }
+
+  .imageWithPrice {
+    position: relative;
+  }

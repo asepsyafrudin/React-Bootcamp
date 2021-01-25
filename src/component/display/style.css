@@ -1,0 +1,14 @@
+
+
+.display{
+    text-align: center;
+    background-color: #5a5a5a;
+    height: 30px;
+}
+
+.display span {
+    color: #dedddd;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    line-height: 30px;
+}

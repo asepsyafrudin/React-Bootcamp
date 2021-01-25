@@ -1,0 +1,16 @@
+.input {
+    border: none;
+    background-image: url("../image/SearchIcon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    height: 15px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.inputSearch {
+    float: right;
+}
