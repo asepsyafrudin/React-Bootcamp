@@ -8,6 +8,7 @@ class Display extends Component {
            
         }
     }
+    
     render() { 
         const {counterChange} = this.props
         return ( 

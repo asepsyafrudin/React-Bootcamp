@@ -19,8 +19,8 @@ class Button extends Component {
             console.log("min function")
         } 
     }
+
     render() { 
-        
         return ( 
             <button className={ButtonStyle.button} onClick={this.onClickFunction}>{this.props.children}</button>
          );

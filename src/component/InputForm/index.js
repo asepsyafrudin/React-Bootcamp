@@ -7,6 +7,7 @@ class InputForm extends Component {
         super(props);
         this.state = {  }
     }
+    
     render() { 
         return ( 
             <input type = {this.props.type} placeholder={this.props.placeholder} className={styleInput.input} onChange={this.props.onChange} required/>
