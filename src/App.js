@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
     this.state = { 
       data : [],
-      currentPage : 2,
+      currentPage : 1,
       maxPage : 9,
       isLoading : true
      }
@@ -87,8 +87,8 @@ class App extends Component {
           </table>
         </div>
         <div className={styleApp.pagination}>
-          <Button onClick={this.prev} disabled={currentPage === 2}>Previous</Button>
-          <span>Page : {currentPage - 1} </span>
+          <Button onClick={this.prev} disabled={currentPage === 1}>Previous</Button>
+          <span>Page : {currentPage} </span>
           <Button onClick={this.next} disabled={currentPage === maxPage}>Next</Button>
         </div>
       </div>
