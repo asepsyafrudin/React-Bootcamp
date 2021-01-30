@@ -9,8 +9,10 @@ class App extends Component {
     this.state = { 
       data : [],
       currentPage : 1,
+      totalDataPerPage : 0,
       maxPage : 0,
-      isLoading : true
+      isLoading : true,
+      startPage : 0
      }
   }
 
@@ -27,15 +29,25 @@ class App extends Component {
 
   prev = () => {
     this.setState({
-      currentPage : this.state.currentPage - 1
+      currentPage : this.state.currentPage - 1,
+      startPage : this.state.startPage - this.state.totalDataPerPage
     }, () => {
       this.fetchApi();
     })
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if(nextState.data === this.state.data) {
+      return false
+    } else {
+      return true
+    }
+  }
+
   next = () => {
     this.setState({
-      currentPage : this.state.currentPage + 1
+      currentPage : this.state.currentPage + 1,
+      startPage : this.state.startPage + this.state.totalDataPerPage
     }, () => {
       this.fetchApi();
     })
@@ -47,12 +59,14 @@ class App extends Component {
     .then(response => this.setState({
       data : response.results,
       maxPage : Math.ceil(response.count/response.results.length),
-      isLoading : false
+      totalDataPerPage : response.results.length,
+      isLoading : false, 
+      startPage : 1
     }));
   }
 
   render() { 
-    const {data, currentPage, maxPage, isLoading} = this.state
+    const {data, currentPage, maxPage, isLoading, startPage} = this.state
     let content ; 
     if(isLoading) {
       content = (
@@ -66,6 +80,7 @@ class App extends Component {
           <table id={styleApp.customers}>
             <thead>
               <tr>
+                  <th>No</th>
                   <th>Name</th>
                   <th>Height</th>
                   <th>Mass</th>
@@ -76,6 +91,7 @@ class App extends Component {
                   {data.map((value,index) => {
                     return (
                       <tr key={index}>
+                        <td>{startPage+index}</td>
                         <td>{value.name}</td>
                         <td>{value.height}</td>
                         <td>{value.mass}</td>
