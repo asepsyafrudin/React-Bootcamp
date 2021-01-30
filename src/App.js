@@ -9,7 +9,7 @@ class App extends Component {
     this.state = { 
       data : [],
       currentPage : 1,
-      maxPage : 9,
+      maxPage : 0,
       isLoading : true
      }
   }
