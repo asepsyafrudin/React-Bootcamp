@@ -1,0 +1,13 @@
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.title span {
+    color: #001529;
+    padding: 10px;
+    border-bottom: double #001529 5px ;
+    width: 300px;
+}
+

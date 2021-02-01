@@ -1,0 +1,15 @@
+.imageProfile {
+    width: 140%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.nameTitle {
+    font-size : 50px;
+    font-family : sans-serif;
+}
+
+.borderBottom {
+    width: 500px;
+    border-bottom: solid black;
+}
